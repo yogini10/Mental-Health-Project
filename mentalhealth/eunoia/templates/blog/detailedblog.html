@@ -10,7 +10,9 @@
     Hello
     <p>{{post.title}}</p>
     <p>{{post.author}}</p>
-    <p>{{post.body}}</p>
+    <p>{{post.body|safe}}</p>
+
+    <div class="blogbody"></div>
 
 </body>
 </html>
