@@ -6,7 +6,7 @@ from django.views.generic import ListView, DetailView
 # Create your views here.
 
 def home(request):
-    return HttpResponse("<h1>Hello World</h1>")
+    return render(request, 'eunoia/home.html', {})
 
 def detailBlog(request, blog_id):
     data = {}
@@ -19,7 +19,7 @@ def detailBlog(request, blog_id):
         'post': post
     }
 
-    return render(request, 'blog/detailedblog.html', data)
+    return render(request, 'eunoia/detailedblog.html', data)
 
 
 def blogGrid(request):
@@ -28,4 +28,4 @@ def blogGrid(request):
 
     data = {'posts': posts}
 
-    return render(request, 'blog/bloggrid.html', data)
+    return render(request, 'eunoia/bloggrid.html', data)
